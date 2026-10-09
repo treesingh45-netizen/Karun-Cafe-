@@ -48,12 +48,12 @@ export const OurStoryPage: React.FC = () => {
             <div className="lg:col-span-5 relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-[#287F7B]/20 aspect-[4/3] bg-white">
                 <img
-                  src="/images/cafe/our_story_craft.jpg"
+                  src="/images/cafe/karun_barista_craft.jpg"
                   alt="Barista crafting specialty coffee at Karun Cafe"
                   width={600}
                   height={450}
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = '/images/drinks/dulce_de_leche_latte.jpg';
+                    (e.currentTarget as HTMLImageElement).src = '/images/cafe/karun_trailer_service.jpg';
                   }}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
@@ -209,12 +209,12 @@ export const OurStoryPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#FFFCF6] p-8 rounded-3xl border border-[#287F7B]/15">
           <div className="lg:col-span-5 aspect-[4/3] rounded-2xl overflow-hidden bg-[#FFF5E4]">
             <img
-              src="/images/drinks/banana_cream_chai_latte.jpg"
-              alt="Banana Cream Chai Latte at Karun Cafe"
+              src="/images/drinks/pumpkin_spice_chai_latte.jpg"
+              alt="Pumpkin Spice Chai Latte at Karun Cafe"
               width={600}
               height={450}
               onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = '/images/drinks/banana_cream_chai_latte.jpg';
+                (e.currentTarget as HTMLImageElement).src = '/images/drinks/pumpkin_spice_chai_latte.jpg';
               }}
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
@@ -225,16 +225,16 @@ export const OurStoryPage: React.FC = () => {
               03 · The Chai Program
             </span>
             <h3 className="font-serif-display text-2xl sm:text-3xl font-bold text-[#155D59]">
-              Slow-Steeped Whole Spices & Cold Foam
+              Slow-Steeped Whole Spices & Warm Pumpkin
             </h3>
             <p className="text-sm text-[#2D3748]/85 leading-relaxed">
-              Never made from artificial powders or concentrated syrup pumps. We simmer organic whole Assam black tea leaves alongside crushed green cardamom pods, cracked cinnamon quills, fresh crushed ginger, and cloves. Topped with our signature banana cold cream foam, it is comfort in a cup.
+              Never made from artificial powders or concentrated syrup pumps. We simmer organic whole Assam black tea leaves alongside crushed green cardamom pods, cracked cinnamon quills, fresh crushed ginger, and cloves, folded with roasted spiced pumpkin. It is autumn comfort in a cup.
             </p>
             <button
               onClick={() => handleGoToMenu('Chai')}
               className="text-xs font-bold text-[#287F7B] hover:text-[#155D59] tracking-wider uppercase inline-flex items-center gap-1 cursor-pointer"
             >
-              <span>Explore 2 Chai Creations</span>
+              <span>Explore Spiced Chai Creation</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
@@ -244,43 +244,64 @@ export const OurStoryPage: React.FC = () => {
       {/* 4. OUR VISUAL WORLD & STORY DETAILS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#FFF5E4] rounded-3xl p-8 sm:p-12 border border-[#287F7B]/20">
-          <div className="max-w-3xl mx-auto space-y-6 text-left">
-            <div>
-              <span className="font-signature text-3xl sm:text-4xl text-[#287F7B] block -mb-1">
-                denver park roots
-              </span>
-              <h2 className="font-serif-display text-3xl sm:text-4xl font-bold text-[#155D59]">
-                Our Civic Center Park Story
-              </h2>
-            </div>
-
-            <div className="space-y-4 text-sm text-[#2D3748]/85 leading-relaxed">
-              <p>
-                Karun Cafe was born from an appreciation for open-air park culture in Denver, Colorado. Civic Center Park connects our city’s premier cultural landmarks—the Denver Art Museum, the Clyfford Still Museum, and the Colorado State Capitol.
-              </p>
-              <p>
-                We believed that park-goers, workers, and weekend art lovers deserved more than ordinary coffee. They deserved a thoughtfully curated beverage stand that married the precision of a specialty third-wave cafe with the easygoing joy of a sunny afternoon outdoors.
-              </p>
-              <p>
-                Today, our team prepares every cup by hand. Whether you are grabbing a quick Dulce de Leche Latte before morning meetings or lounging on the park grass with a layered Blueberry Tart Matcha, we invite you to take a breath and enjoy a little sunshine in every sip.
-              </p>
-            </div>
-
-            <div className="pt-4 border-t border-[#287F7B]/15 flex flex-wrap items-center justify-between gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7 space-y-6 text-left">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#155D59] block">
-                  Location & Contact
+                <span className="font-signature text-3xl sm:text-4xl text-[#287F7B] block -mb-1">
+                  denver park roots
                 </span>
-                <span className="text-xs text-[#8B5E3C]">
-                  Civic Center Park, Denver CO 80205 · karuncafe@gmail.com
-                </span>
+                <h2 className="font-serif-display text-3xl sm:text-4xl font-bold text-[#155D59]">
+                  Our Civic Center Park Story
+                </h2>
               </div>
-              <button
-                onClick={() => handleGoToMenu()}
-                className="px-6 py-3 bg-[#287F7B] hover:bg-[#155D59] text-[#FFF5E4] text-xs font-semibold uppercase tracking-wider rounded-lg transition-colors cursor-pointer"
-              >
-                Browse & Order Drinks
-              </button>
+
+              <div className="space-y-4 text-sm text-[#2D3748]/85 leading-relaxed">
+                <p>
+                  Karun Cafe was born from an appreciation for open-air park culture in Denver, Colorado. Civic Center Park connects our city’s premier cultural landmarks—the Denver Art Museum, the Clyfford Still Museum, and the Colorado State Capitol.
+                </p>
+                <p>
+                  Founded by Barbara Pavez, Karun Cafe brings the warmth of handcrafted coffee, ceremonial matcha, and whole-spiced chai into Denver's civic green. We believe park-goers, art museum visitors, and neighbors deserve a welcoming haven where each cup is prepared with intention and genuine warmth.
+                </p>
+                <p>
+                  Whether you are grabbing a quick Dulce de Leche Latte before morning meetings or lounging on the park grass with an iced Peach Matcha, we invite you to take a breath and enjoy a little sunshine in every sip.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-[#287F7B]/15 flex flex-wrap items-center justify-between gap-4">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#155D59] block">
+                    Location & Contact
+                  </span>
+                  <span className="text-xs text-[#8B5E3C]">
+                    Civic Center Park, Denver CO 80205 · karuncafe@gmail.com
+                  </span>
+                </div>
+                <button
+                  onClick={() => handleGoToMenu()}
+                  className="px-6 py-3 bg-[#287F7B] hover:bg-[#155D59] text-[#FFF5E4] text-xs font-semibold uppercase tracking-wider rounded-lg transition-colors cursor-pointer"
+                >
+                  Browse & Order Drinks
+                </button>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 space-y-4">
+              <div className="rounded-2xl overflow-hidden shadow-xl border border-[#287F7B]/20 aspect-[3/4] bg-white group">
+                <img
+                  src="/images/cafe/barbara_pavez_founder.jpg"
+                  alt="Barbara Pavez, Founder of Karun Cafe in Denver"
+                  width={600}
+                  height={800}
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = '/images/cafe/karun_trailer_service.jpg';
+                  }}
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <p className="text-center text-xs text-[#8B5E3C] italic">
+                Barbara Pavez · Founder of Karun Cafe
+              </p>
             </div>
           </div>
         </div>

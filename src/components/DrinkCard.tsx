@@ -16,30 +16,30 @@ export const DrinkCard: React.FC<DrinkCardProps> = ({ item }) => {
   const [quantity, setQuantity] = useState<number>(1);
   const [justAdded, setJustAdded] = useState<boolean>(false);
   const [imgSrc, setImgSrc] = useState<string>(item.image);
-  const [imgLoaded, setImgLoaded] = useState<boolean>(false);
-  const [fallbackAttempted, setFallbackAttempted] = useState<boolean>(false);
+  const [_imgLoaded, setImgLoaded] = useState<boolean>(false);
+  const [retryStep, setRetryStep] = useState<number>(0);
 
   useEffect(() => {
     setImgSrc(item.image);
-    setFallbackAttempted(false);
+    setRetryStep(0);
   }, [item.image]);
 
   const handleImageError = () => {
-    if (!fallbackAttempted) {
-      setFallbackAttempted(true);
-      // Try alternate asset path if initial path fails
-      if (imgSrc.startsWith('/images/drinks/')) {
-        const file = imgSrc.replace('/images/drinks/', '');
-        setImgSrc(`/src/assets/images/real/${file}`);
-      } else if (imgSrc.startsWith('/src/assets/images/real/')) {
-        const file = imgSrc.replace('/src/assets/images/real/', '');
-        setImgSrc(`/images/drinks/${file}`);
-      } else {
-        setImgSrc('/images/drinks/dulce_de_leche_latte.jpg');
-      }
-    } else {
-      // Guaranteed local fallback
-      setImgSrc('/images/drinks/dulce_de_leche_latte.jpg');
+    // Generate valid alternative path candidates specifically for this drink
+    const candidatePaths = [
+      item.image,
+      `/${item.name}.jpg`,
+      `/images/drinks/${item.name}.jpg`,
+      `/images/drinks/${item.name.toLowerCase().replace(/ /g, '_')}.jpg`,
+      `/${item.name.toLowerCase().replace(/ /g, '_')}.jpg`,
+      `/images/drinks/${encodeURIComponent(item.name)}.jpg`,
+      `/${encodeURIComponent(item.name)}.jpg`,
+    ];
+
+    if (retryStep + 1 < candidatePaths.length) {
+      const nextStep = retryStep + 1;
+      setRetryStep(nextStep);
+      setImgSrc(candidatePaths[nextStep]);
     }
   };
 
@@ -73,10 +73,8 @@ export const DrinkCard: React.FC<DrinkCardProps> = ({ item }) => {
           onError={handleImageError}
           onLoad={() => setImgLoaded(true)}
           referrerPolicy="no-referrer"
-          className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
-            imgLoaded ? 'opacity-100' : 'opacity-90'
-          }`}
-          loading="lazy"
+          className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+          loading="eager"
         />
 
         {/* Quiet Category and Status Indicators (no static pills) */}

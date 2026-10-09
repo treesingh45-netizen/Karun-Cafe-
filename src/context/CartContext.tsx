@@ -52,8 +52,13 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const [menuItems, setMenuItems] = useState<MenuItem[]>(() => {
     try {
-      const saved = localStorage.getItem('karun_menu_items');
-      return saved ? JSON.parse(saved) : initialMenuItems;
+      // Clear all legacy and stale menu storage caches so fresh images and items always load
+      localStorage.removeItem('karun_menu_items');
+      localStorage.removeItem('karun_menu_items_v2');
+      localStorage.removeItem('karun_menu_v1');
+      localStorage.removeItem('karun_menu_10_drinks');
+      localStorage.removeItem('karun_menu');
+      return initialMenuItems;
     } catch {
       return initialMenuItems;
     }
@@ -85,7 +90,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   // Persist menu changes to localStorage
   useEffect(() => {
     try {
-      localStorage.setItem('karun_menu_items', JSON.stringify(menuItems));
+      localStorage.setItem('karun_menu_10_drinks', JSON.stringify(menuItems));
     } catch (e) {
       console.warn('Storage save failed', e);
     }

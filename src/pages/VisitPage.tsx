@@ -156,16 +156,36 @@ export const VisitPage: React.FC = () => {
             </a>
           </div>
 
-          <div className="rounded-2xl overflow-hidden shadow-lg border border-[#287F7B]/20 bg-white h-[420px]">
-            <iframe
-              title="Verified Map Listing of Civic Center Park Denver for Karun Cafe"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.896749964551!2d-104.98971272347102!3d39.73919997155609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c78d46fb332c9%3A0xc3f0b2f69e6bca7!2sCivic%20Center%20Park!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            <div className="lg:col-span-7 rounded-2xl overflow-hidden shadow-lg border border-[#287F7B]/20 bg-white h-[400px]">
+              <iframe
+                title="Verified Map Listing of Civic Center Park Denver for Karun Cafe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.896749964551!2d-104.98971272347102!3d39.73919997155609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c78d46fb332c9%3A0xc3f0b2f69e6bca7!2sCivic%20Center%20Park!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div className="lg:col-span-5 rounded-2xl overflow-hidden shadow-lg border border-[#287F7B]/20 bg-white relative h-[400px]">
+              <img
+                src="/images/cafe/karun_trailer_service.jpg"
+                alt="Karun Cafe mobile trailer at Civic Center Park"
+                width={600}
+                height={400}
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = '/images/cafe/karun_trailer_exterior.jpg';
+                }}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent flex flex-col justify-end p-6 text-white">
+                <span className="text-xs uppercase font-semibold text-[#F4B54F] tracking-wider">Spot the Sunflowers</span>
+                <h4 className="font-serif-display text-xl font-bold">Our Civic Center Park Bar</h4>
+                <p className="text-xs text-white/85 mt-1">Look for our signature white trailer adorned with fresh yellow sunflowers near the central park lawns.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -52,14 +52,14 @@ export const initialCafeConfig: CafeConfig = {
 };
 
 export const initialMenuItems: MenuItem[] = [
-  // COFFEE
+  // COFFEE (5 Drinks)
   {
     id: 'dulce-de-leche-latte',
     name: 'Dulce de Leche Latte',
     category: 'Coffee',
     price: 6.75,
     description: 'Double espresso pulled over handcrafted dulce de leche, steamed whole or oat milk, and finished with a golden caramel swirl.',
-    image: '/images/drinks/dulce_de_leche_latte.jpg',
+    image: '/images/drinks/Dulce de Leche Latte.jpg',
     isBestLoved: true,
     available: true,
     tags: ['Signature', 'Bestseller', 'Caramel Notes'],
@@ -70,7 +70,7 @@ export const initialMenuItems: MenuItem[] = [
     category: 'Coffee',
     price: 7.00,
     description: 'Real roasted pumpkin puree simmered with autumn spices, espresso, velvety milk, and freshly ground nutmeg and star anise.',
-    image: '/images/drinks/pumpkin_spice_latte.jpg',
+    image: '/images/drinks/Pumpkin Spice Latte.jpg',
     isSeasonal: true,
     available: true,
     tags: ['Autumn Special', 'Warm Spices'],
@@ -81,7 +81,7 @@ export const initialMenuItems: MenuItem[] = [
     category: 'Coffee',
     price: 6.75,
     description: 'Pure amber maple reduction infused with Ceylon cinnamon bark, pulled with double espresso and creamy microfoam.',
-    image: '/images/drinks/maple_cinnamon_latte.jpg',
+    image: '/images/drinks/Maple Cinnamon Latte.jpg',
     isBestLoved: true,
     available: true,
     tags: ['Customer Favorite', 'Maple Infused'],
@@ -92,7 +92,7 @@ export const initialMenuItems: MenuItem[] = [
     category: 'Coffee',
     price: 7.00,
     description: 'Crisp spiced apple cider reduction folded into warm espresso, finished with buttery caramel and gentle autumnal warmth.',
-    image: '/images/drinks/caramel_apple_latte.jpg',
+    image: '/images/drinks/Caramel Apple Latte.jpg',
     isSeasonal: true,
     available: true,
     tags: ['Seasonal', 'Spiced Apple'],
@@ -103,19 +103,19 @@ export const initialMenuItems: MenuItem[] = [
     category: 'Coffee',
     price: 6.75,
     description: 'Brown butter brown sugar reduction, sweet vanilla cream notes, double espresso, and fragrant cinnamon drizzle.',
-    image: '/images/drinks/cinnamon_roll_latte.jpg',
+    image: '/images/drinks/Cinnamon Roll Latte.jpg',
     available: true,
     tags: ['Bakery Notes', 'Sweet Spice'],
   },
 
-  // MATCHA
+  // MATCHA (4 Drinks)
   {
     id: 'pumpkin-spice-matcha',
     name: 'Pumpkin Spice Matcha',
     category: 'Matcha',
     price: 7.25,
     description: 'Stone-ground ceremonial grade Uji matcha whisked fresh, topped with velvety pumpkin cold foam and warm fall spices.',
-    image: '/images/drinks/pumpkin_spice_matcha.jpg',
+    image: '/images/drinks/Pumpkin Spice Matcha.jpg',
     isSeasonal: true,
     available: true,
     tags: ['Seasonal Special', 'Ceremonial Grade'],
@@ -126,7 +126,7 @@ export const initialMenuItems: MenuItem[] = [
     category: 'Matcha',
     price: 7.25,
     description: 'Signature layered drink with house-made wild blueberry compote, creamy oat milk, and vibrant emerald ceremonial matcha.',
-    image: '/images/drinks/blueberry_tart_matcha.jpg',
+    image: '/images/drinks/Blueberry Tart Matcha.jpg',
     isBestLoved: true,
     available: true,
     tags: ['Iconic Layered', 'Wild Berry', 'Bestseller'],
@@ -137,7 +137,7 @@ export const initialMenuItems: MenuItem[] = [
     category: 'Matcha',
     price: 7.25,
     description: 'Delicate ripe Colorado peach puree layered with chilled oat milk and crowned with ceremonial whisked matcha.',
-    image: '/images/drinks/peach_matcha.jpg',
+    image: '/images/drinks/Peach Matcha.jpg',
     isBestLoved: true,
     available: true,
     tags: ['Seasonal', 'Fruit Forward'],
@@ -148,33 +148,24 @@ export const initialMenuItems: MenuItem[] = [
     category: 'Matcha',
     price: 7.25,
     description: 'Rich whipped banana cold cream floating over chilled ceremonial Japanese green tea matcha and iced oat milk.',
-    image: '/images/drinks/banana_cream_matcha.jpg',
+    image: '/images/drinks/Banana Cream Matcha.jpg',
+    isBestLoved: true,
     available: true,
     tags: ['Velvety Cream', 'Delicate Sweetness'],
   },
 
-  // CHAI
+  // CHAI (1 Drink)
   {
     id: 'pumpkin-spice-chai-latte',
     name: 'Pumpkin Spice Chai Latte',
     category: 'Chai',
     price: 6.75,
     description: 'Slow-simmered organic Assam black tea, fresh ginger, cracked cardamom, and cinnamon combined with spiced pumpkin.',
-    image: '/images/drinks/pumpkin_spice_chai_latte.jpg',
+    image: '/images/drinks/Pumpkin Spice Chai Latte.jpg',
     isSeasonal: true,
-    available: true,
-    tags: ['Autumn Warmth', 'Whole Spices'],
-  },
-  {
-    id: 'banana-cream-chai-latte',
-    name: 'Banana Cream Chai Latte',
-    category: 'Chai',
-    price: 7.00,
-    description: 'Warm whole-spiced black chai tea topped with thick chilled banana cream foam and freshly microplaned nutmeg.',
-    image: '/images/drinks/banana_cream_chai_latte.jpg',
     isBestLoved: true,
     available: true,
-    tags: ['Bestseller', 'Whipped Banana Cream'],
+    tags: ['Autumn Warmth', 'Whole Spices', 'Signature Chai'],
   },
 ];
 
@@ -191,7 +182,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: 'What drinks are available?',
-    answer: 'We craft three signature families of beverages: artisanal specialty Coffee (including Dulce de Leche Latte, Maple Cinnamon Latte, and seasonal creations), ceremonial grade Japanese Matcha (featuring our layered Blueberry Tart and Peach Matcha), and authentic slow-steeped spiced Chai (including our fan-favorite Banana Cream Chai Latte). Explore the full selection on our Menu page.',
+    answer: 'We craft three signature families of beverages across our 10-drink menu: artisanal specialty Coffee (Dulce de Leche Latte, Pumpkin Spice Latte, Maple Cinnamon Latte, Caramel Apple Latte, Cinnamon Roll Latte), ceremonial grade Japanese Matcha (Blueberry Tart Matcha, Peach Matcha, Banana Cream Matcha, Pumpkin Spice Matcha), and authentic slow-steeped spiced Chai (Pumpkin Spice Chai Latte). Explore the full selection on our Menu page.',
   },
   {
     question: 'How do I place an order online?',

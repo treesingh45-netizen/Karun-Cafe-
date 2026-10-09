@@ -33,28 +33,28 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenSommelier: _onOpenSomm
 
   return (
     <div className="space-y-24 pb-20">
-      {/* 1. HERO SECTION — FULL-SCREEN CINEMATIC CAFE BACKGROUND */}
+      {/* 1. HERO SECTION — FULL-SCREEN CINEMATIC CAFE BACKGROUND (100% REAL PHOTOGRAPHY, NO AI) */}
       <section className="relative w-full min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Full-width Background Photograph */}
+        {/* Full-width Authentic Background Photograph */}
         <div className="absolute inset-0 w-full h-full">
           <img
-            src="/images/cafe/hero_real_cafe.jpg"
-            alt="Warm cup of specialty latte and coffee on an authentic wooden cafe table at Karun Cafe"
+            src="/images/cafe/karun_trailer_service.jpg"
+            alt="Karun Cafe authentic mobile coffee trailer in Denver with smiling barista and fresh yellow sunflowers"
             width={1920}
             height={1080}
             onError={(e) => {
-              (e.currentTarget as HTMLImageElement).src = '/images/drinks/dulce_de_leche_latte.jpg';
+              (e.currentTarget as HTMLImageElement).src = '/images/cafe/hero_real_cafe.jpg';
             }}
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover object-center scale-[1.01]"
+            className="w-full h-full object-cover object-center scale-[1.01] transition-all duration-500"
             loading="eager"
           />
 
-          {/* Subtle Full-Area Dark Teal Overlay with Soft Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#155D59]/75 via-[#155D59]/55 to-[#155D59]/85 pointer-events-none" />
+          {/* Balanced Cinematic Scrim: Preserves authentic photo vibrancy while keeping text crisp */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#155D59]/65 via-black/40 to-black/75 pointer-events-none" />
 
           {/* Vignette Depth Accent */}
-          <div className="absolute inset-0 bg-radial-gradient from-transparent via-black/20 to-black/40 pointer-events-none" />
+          <div className="absolute inset-0 bg-radial-gradient from-transparent via-black/10 to-black/40 pointer-events-none" />
         </div>
 
         {/* 2. CENTERED HERO CONTENT (No Box or Card Container) */}
@@ -74,11 +74,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenSommelier: _onOpenSomm
           <div className="font-signature text-2xl sm:text-3xl md:text-4xl text-[#FFF5E4] font-normal tracking-wide drop-shadow-sm -mt-2">
             handcrafted coffee, matcha & chai
           </div>
-
-          {/* Supporting Text */}
-          <p className="text-base sm:text-lg md:text-xl text-[#FFFCF6]/90 max-w-[580px] mx-auto leading-relaxed font-normal">
-            Discover your new favorite in coffee, matcha, and chai — made for the moments worth savoring.
-          </p>
 
           {/* 3. CALL-TO-ACTION BUTTONS */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 pt-3 w-full sm:w-auto">
@@ -136,12 +131,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenSommelier: _onOpenSomm
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-[#FFF5E4]">
               <img
-                src="/images/drinks/dulce_de_leche_latte.jpg"
+                src="/images/drinks/Dulce de Leche Latte.jpg"
                 alt="Artisanal specialty coffee — Dulce de Leche Latte"
                 width={600}
                 height={450}
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/images/drinks/dulce_de_leche_latte.jpg';
+                  (e.currentTarget as HTMLImageElement).src = '/Dulce de Leche Latte.jpg';
                 }}
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -173,12 +168,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenSommelier: _onOpenSomm
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-[#FFF5E4]">
               <img
-                src="/images/drinks/blueberry_tart_matcha.jpg"
+                src="/images/drinks/Blueberry Tart Matcha.jpg"
                 alt="Ceremonial Japanese Matcha — Layered Blueberry Tart Matcha"
                 width={600}
                 height={450}
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/images/drinks/blueberry_tart_matcha.jpg';
+                  (e.currentTarget as HTMLImageElement).src = '/Blueberry Tart Matcha.jpg';
                 }}
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -210,12 +205,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenSommelier: _onOpenSomm
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-[#FFF5E4]">
               <img
-                src="/images/drinks/banana_cream_chai_latte.jpg"
-                alt="Spiced Chai Latte — Banana Cream Chai Latte"
+                src="/images/drinks/Pumpkin Spice Chai Latte.jpg"
+                alt="Spiced Chai Latte — Pumpkin Spice Chai Latte"
                 width={600}
                 height={450}
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/images/drinks/banana_cream_chai_latte.jpg';
+                  (e.currentTarget as HTMLImageElement).src = '/Pumpkin Spice Chai Latte.jpg';
                 }}
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -230,11 +225,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenSommelier: _onOpenSomm
                   Spiced Chai
                 </h3>
                 <p className="text-xs text-[#2D3748]/80 mt-2 leading-relaxed">
-                  Slow-steeped Assam black tea, cracked green cardamom, cinnamon, and our crowd-pleasing Banana Cream cold foam.
+                  Slow-steeped Assam black tea, cracked green cardamom, cinnamon, and whole pumpkin spice blend.
                 </p>
               </div>
               <div className="pt-4 flex items-center text-xs font-semibold text-[#287F7B] group-hover:translate-x-1 transition-transform">
-                <span>View 2 Chai Drinks</span>
+                <span>View Spiced Chai Selection</span>
                 <ArrowRight className="w-3.5 h-3.5 ml-1" />
               </div>
             </div>
@@ -264,7 +259,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenSommelier: _onOpenSomm
             onClick={() => handleNav('menu')}
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#287F7B] hover:text-[#155D59] transition-colors cursor-pointer self-start md:self-end"
           >
-            <span>See Full 11-Drink Menu</span>
+            <span>See Full 10-Drink Menu</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
@@ -341,8 +336,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenSommelier: _onOpenSomm
 
       {/* BRAND INTRODUCTION & STORY TEASER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#FFFCF6] border border-[#287F7B]/20 rounded-3xl p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-8 space-y-5 text-left">
+        <div className="bg-[#FFFCF6] border border-[#287F7B]/20 rounded-3xl p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-7 space-y-5 text-left">
             <SunflowerIcon className="w-10 h-10" />
             <div>
               <span className="font-signature text-2xl sm:text-3xl text-[#287F7B] block -mb-1">
@@ -355,6 +350,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenSommelier: _onOpenSomm
             <p className="text-sm text-[#2D3748]/85 leading-relaxed">
               Named after the warmth of the sun and rooted in the vibrancy of Denver’s Civic Center Park, Karun Cafe reimagines what a parkside coffee experience can be. From the sunflower in our emblem to our signature palette of deep teal, golden yellow, and warm cream, every element is designed to offer a gentle pause in your busy day.
             </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="p-4 bg-[#FFF5E4] rounded-xl border border-[#287F7B]/15 text-xs text-[#155D59] space-y-1">
+                <span className="font-bold block text-[#8B5E3C]">Uncompromised Sourcing</span>
+                <p className="text-[#2D3748]/80">Specialty single-origin espresso, ceremonial Uji matcha, and slow-steeped organic chai.</p>
+              </div>
+              <div className="p-4 bg-[#FFF5E4] rounded-xl border border-[#287F7B]/15 text-xs text-[#155D59] space-y-1">
+                <span className="font-bold block text-[#8B5E3C]">Denver Park Hospitality</span>
+                <p className="text-[#2D3748]/80">Situated in Civic Center Park with open-air views, sunshine, and mountain breezes.</p>
+              </div>
+            </div>
+
             <div className="pt-2">
               <button
                 onClick={() => handleNav('story')}
@@ -366,17 +373,22 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenSommelier: _onOpenSomm
             </div>
           </div>
 
-          <div className="lg:col-span-4 p-6 bg-[#FFF5E4] rounded-2xl border border-[#287F7B]/15 space-y-4 text-xs text-[#155D59]">
-            <h4 className="font-serif-display text-lg font-bold text-[#8B5E3C]">
-              What Defines Us
-            </h4>
-            <div className="space-y-3">
-              <p>
-                <strong>Uncompromised Sourcing:</strong> Single-origin espresso beans, organic Assam whole-leaf chai, and Grade-A ceremonial matcha imported directly from Uji, Japan.
-              </p>
-              <p>
-                <strong>Park Hospitality:</strong> Situated in Civic Center Park, Denver with scenic mountain-skyline ambience and open lawn seating.
-              </p>
+          <div className="lg:col-span-5 relative">
+            <div className="rounded-2xl overflow-hidden shadow-xl border border-[#287F7B]/20 bg-white aspect-[4/3] group">
+              <img
+                src="/images/cafe/karun_trailer_exterior.jpg"
+                alt="Karun Cafe custom mobile trailer setup in Denver's Civic Center Park"
+                width={600}
+                height={450}
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = '/images/cafe/karun_trailer_service.jpg';
+                }}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div className="mt-2 text-center">
+              <span className="text-[11px] text-[#8B5E3C] italic">Our mobile coffee trailer in Civic Center Park, Denver</span>
             </div>
           </div>
         </div>
@@ -500,8 +512,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenSommelier: _onOpenSomm
           </div>
           <div className="aspect-square rounded-xl overflow-hidden bg-[#FFF5E4] border border-[#287F7B]/15 group">
             <img
-              src="/images/drinks/blueberry_tart_matcha.jpg"
-              alt="Blueberry Tart Matcha at Karun Cafe"
+              src="/images/drinks/banana_cream_matcha.jpg"
+              alt="Banana Cream Matcha at Karun Cafe"
               width={400}
               height={400}
               onError={(e) => {
