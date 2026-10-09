@@ -1,0 +1,6 @@
+{
+  "name": "Karun Cafe — Premium Denver Coffee, Matcha & Chai",
+  "description": "Boutique specialty coffee, ceremonial matcha, and spiced chai located at Civic Center Park, Denver, Colorado. Browse our signature menu and submit online order requests.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
